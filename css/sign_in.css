@@ -13,15 +13,16 @@ body{
     margin: 0;
     width:700px;
     margin-top: 50px;
+    padding: 0;
 }}
 
 h1{
-    text-align: center;
-    font-family: 'Tilt Warp';
-    color: rgba(0, 0, 0, 0.845);
-    font-size: 40px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-   
+  text-align: center;
+  font-family: 'Tilt Warp';
+  color: rgba(0, 0, 0, 0.845);
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom:10px ;
 }
 
 .form {
@@ -34,7 +35,7 @@ h1{
   border-radius: 20px;
   position: relative;
   margin: auto;
-  
+  margin-top: 40px;
 }
 
 .title {
@@ -46,18 +47,11 @@ h1{
   display: flex;
   align-items: center;
   padding-left: 30px;
-
+  margin: auto;
+  right: 16px;
 }
 
-.title::before,.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: royalblue;
-}
+
 
 .title::before {
   width: 18px;
@@ -74,6 +68,7 @@ h1{
 .message, .signin {
   color: rgba(88, 87, 87, 0.822);
   font-size: 14px;
+  text-align: center;
 }
 
 .signin {
