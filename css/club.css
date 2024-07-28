@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
+
+body{
+    background-image: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+    margin: 0;
+    padding: 0;
+  }
+  .head{
+    border: 2px solid black;
+  }
+.head h1{
+  text-align: center;
+  font-family: Rubik Doodle Shadow;
+  color: rgba(21, 21, 142, 0.845);
+  font-size: 40px;
+}
