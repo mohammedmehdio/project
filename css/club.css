@@ -5,16 +5,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
 
 body{
-    background-image: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+   
     margin: 0;
+    background-image:white;
+
     padding: 0;
   }
   .head{
-    border: 2px solid black;
+    border: 2px ;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
+    flex-shrink: 0;
+    background-color: #36E2A4;
   }
 .head h1{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+padding: 30px;
+}
+i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+button{
+  background-color: #e23636;
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
-  font-family: Rubik Doodle Shadow;
-  color: rgba(21, 21, 142, 0.845);
-  font-size: 40px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 360;
+  line-height: normal;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  margin-right: 45px;
+}
+.line{
+  width: 70%; 
+  height: 0px; 
+  left: 100px; 
+  position: absolute; 
+  margin-top: 50px;
+  border: 3px black solid ;
+}
+.sportclub{
+  left: 174px;
+  top: 373px; 
+  position: absolute; 
+  text-align: center; 
+  color: black; 
+  font-size: 30px; 
+  font-family: Inter; 
+  font-weight: 800; 
 }
