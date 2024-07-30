@@ -12,43 +12,43 @@
 <br> <h1 >Let's begin the adventure !
     </h1>
     </div>
-    <form class="form">
+    <form class="form" action="../php/signup.php" method="post">
         <p class="title">Register </p>
         <p class="message">We'll sign you in, or create an account if you don't have one yet.</p>
             <div class="flex">
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" placeholder="" required="" id="firstName" name="firstName">
                 <span>Firstname</span>
             </label>
     
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" placeholder="" required="" id="lastName" name="lastName">
                 <span>Lastname</span>
             </label>
         </div>  
                 
         <label>
-            <input class="input" type="email" placeholder="" required="">
+            <input class="input" type="email" placeholder="" required="" id="email" name="email">
             <span>Email</span>
         </label> 
 
         <label>
-            <input class="input" type="tel" id="phone" name="phone" placeholder="" required="">
+            <input class="input" type="tel" id="phone" name="phone" placeholder="" required="" >
             <span>Phone Number</span>
         </label>
 
         <label>
-            <input class="input" type="date" placeholder="" required="">
+            <input class="input" type="date" placeholder="" required="" id="birth_date" name="birth_date">
             <span></span>
         </label> 
             
         <label>
-            <input class="input" type="password" placeholder="" required="">
+            <input class="input" type="password" placeholder=""  required="" id="password" name="password">
             <span>Password</span>
         </label>
 
         <label>
-            <input class="input" type="password" placeholder="" required="">
+            <input class="input" type="password" placeholder="" required="" id="confirm_password" name="confirm_password">
             <span>Confirm password</span>
         </label>
         <button>
