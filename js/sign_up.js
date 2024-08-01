@@ -1,163 +1,139 @@
 function validateForm() {
-     let Firstname = document.getElementById('Firstname').value;
-     let Lastname = document.getElementById('Lastname').value;
+     let firstName = document.getElementById('firstName').value;
+     let lastName = document.getElementById('lastName').value;
      let email = document.getElementById('email').value;
-     let phone_number = document.getElementById('Phone-number').value;
+     let phone = document.getElementById('phone').value;
      let password = document.getElementById('password').value;
-     let confirm_password = document.getElementById('Confirm-password').value;
-     let date = document.getElementById('date').value;
+     let confirmPassword = document.getElementById('confirm_password').value;
+     let birthDate = document.getElementById('birth_date').value;
  
-     let FirstnamePattern = /^[a-zA-Z]{3,}$/;
-     let LastnamePattern = /^[a-zA-Z]{3,}$/;
+     let FirstnamePattern = /^([a-zA-Z]{3,} ?)+$/;
+     let lastNamePattern = /^[a-zA-Z]{3,}$/;
      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-     let phone_numberPattern = /^[0-9]{10}$/;
+     let phonePattern = /^[0-9]{10}$/;
      let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/; // At least 8 characters and one number
  
-     let FirstnameValid = FirstnamePattern.test(Firstname);
-     let LastnameValid = LastnamePattern.test(Lastname);
+     let firstNameValid = firstNamePattern.test(firstName);
+     let lastNameValid = lastNamePattern.test(lastName);
      let emailValid = emailPattern.test(email);
-     let phone_numberValid = phone_numberPattern.test(phone_number);
+     let phoneValid = phonePattern.test(phone);
      let passwordValid = passwordPattern.test(password);
-     let confirm_passwordValid = password === confirm_password;
+     let confirmPasswordValid = password === confirmPassword;
  
-     let ageValid = validateAge(date);
+     let ageValid = validateAge(birthDate);
  
-     let FirstnameError = document.getElementById('Firstname-error');
-     let LastnameError = document.getElementById('Lastname-error');
+     let firstNameError = document.getElementById('Firstname-error');
+     let lastNameError = document.getElementById('Lastname-error');
      let emailError = document.getElementById('email-error');
-     let phone_numberError = document.getElementById('phone_number-error');
+     let phoneError = document.getElementById('phone_number-error');
      let passwordError = document.getElementById('password-error');
-     let confirm_passwordError = document.getElementById('confirm_password-error');
+     let confirmPasswordError = document.getElementById('confirm_password-error');
      let ageError = document.getElementById('age-error');
-     
  
-     FirstnameError.textContent = '';
-     LastnameError.textContent = '';
+     firstNameError.textContent = '';
+     lastNameError.textContent = '';
      emailError.textContent = '';
-     phone_numberError.textContent = '';
+     phoneError.textContent = '';
      passwordError.textContent = '';
-     confirm_passwordError.textContent = '';
+     confirmPasswordError.textContent = '';
+     ageError.textContent = '';
  
-     if (!FirstnameValid) {
-         FirstnameError.textContent = 'Please enter a valid Firstname';
+     if (!firstNameValid) {
+         firstNameError.textContent = 'Please enter a valid Firstname';
      }
- 
-     if (!LastnameValid) {
-         LastnameError.textContent = 'Please enter a valid Lastname';
+     if (!lastNameValid) {
+         lastNameError.textContent = 'Please enter a valid Lastname';
      }
- 
      if (!emailValid) {
          emailError.textContent = 'Please enter a valid email address';
      }
- 
-     if (!phone_numberValid) {
-         phone_numberError.textContent = 'Please enter a valid phone number';
+     if (!phoneValid) {
+         phoneError.textContent = 'Please enter a valid phone number';
      }
- 
      if (!passwordValid) {
          passwordError.textContent = 'Password must be at least 8 characters long and contain at least one number.';
      }
- 
-     if (!confirm_passwordValid) {
-         confirm_passwordError.textContent = 'Passwords do not match.';
+     if (!confirmPasswordValid) {
+         confirmPasswordError.textContent = 'Passwords do not match.';
      }
- 
      if (!ageValid) {
-           ageError.textContent = 'Age must be between 17 and 50';
-         
+         ageError.textContent = 'Age must be between 17 and 50';
      }
  
-     if (FirstnameValid && LastnameValid && emailValid && phone_numberValid && passwordValid && confirm_passwordValid && ageValid) {
-         
-         location.reload();
-     }
+     return firstNameValid && lastNameValid && emailValid && phoneValid && passwordValid && confirmPasswordValid && ageValid;
  }
  
- function validateAge(date) {
-     let birthDate = new Date(date);
+ function validateAge(birthDate) {
+     let birthDateObj = new Date(birthDate);
      let today = new Date();
-     let age = today.getFullYear() - birthDate.getFullYear();
-     let monthDifference = today.getMonth() - birthDate.getMonth();
+     let age = today.getFullYear() - birthDateObj.getFullYear();
+     let monthDifference = today.getMonth() - birthDateObj.getMonth();
  
-     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDateObj.getDate())) {
          age--;
      }
  
-     return age >= 17 && age<=50; // Age must be greater than or equal to 17
+     return age >= 17 && age <= 50; // Age must be between 17 and 50
  }
-
- document.addEventListener('DOMContentLoaded', function(){
-     let FirstnameInput = document.getElementById('Firstname');
-     let LastnameInput = document.getElementById('Lastname');
+ 
+ document.addEventListener('DOMContentLoaded', function() {
+     let firstNameInput = document.getElementById('firstName');
+     let lastNameInput = document.getElementById('lastName');
      let emailInput = document.getElementById('email');
-     let phone_numberInput = document.getElementById('Phone-number');
-     let ageInput = document.getElementById('date');
+     let phoneInput = document.getElementById('phone');
+     let birthDateInput = document.getElementById('birth_date');
      let passwordInput = document.getElementById('password');
-     let confirm_passwordInput = document.getElementById('Confirm-password');
-
-     FirstnameInput.addEventListener('keydown', function(event){
-           if(event.key === 'Enter'){
-               LastnameInput.focus();
-          
-           } else if(event.key === 'ArrowDown'){
-               LastnameInput.focus();
-           } 
+     let confirmPasswordInput = document.getElementById('confirm_password');
+ 
+     firstNameInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             lastNameInput.focus();
+         }
      });
-     LastnameInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    emailInput.focus();
-               } else if(event.key === 'ArrowDown'){
-                    emailInput.focus();
-               } 
-               else if(event.key === 'ArrowUp'){
-                    FirstnameInput.focus();
-               }
+     lastNameInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             emailInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             firstNameInput.focus();
+         }
      });
-     emailInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    phone_numberInput.focus();
-               } else if(event.key === 'ArrowDown'){
-                    phone_numberInput.focus();
-               } else if(event.key === 'ArrowUp'){
-                    FirstnameInput.focus();
-               } 
+     emailInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             phoneInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             lastNameInput.focus();
+         }
      });
-     phone_numberInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    ageInput.focus();
-               } else if(event.key === 'ArrowDown'){
-                    ageInput.focus();
-               } else if(event.key === 'ArrowUp'){
-                    emailInput.focus();
-               } 
+     phoneInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             birthDateInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             emailInput.focus();
+         }
      });
-     ageInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    passwordInput.focus();
-               } else if(event.key === 'ArrowDown'){
-                    passwordInput.focus();
-               } else if(event.key === 'ArrowUp'){
-                    phone_numberInput.focus();
-               } 
+     birthDateInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             passwordInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             phoneInput.focus();
+         }
      });
-     passwordInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    confirm_passwordInput.focus();
-               } else if(event.key === 'ArrowDown'){
-                    confirm_passwordInput.focus();
-               } else if(event.key === 'ArrowUp'){
-                    ageInput.focus();
-               } 
+     passwordInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             confirmPasswordInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             birthDateInput.focus();
+         }
      });
-     confirm_passwordInput.addEventListener('keydown', function(event){
-               if(event.key === 'Enter'){
-                    validateForm();
-               } else if(event.key === 'ArrowUp'){
-                    passwordInput.focus();
-               } 
+     confirmPasswordInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter') {
+             validateForm();
+         } else if (event.key === 'ArrowUp') {
+             passwordInput.focus();
+         }
      });
-
- })
+ });
+ 
  function togglePasswordVisibility(id) {
      let input = document.getElementById(id);
      if (input.type === "password") {
