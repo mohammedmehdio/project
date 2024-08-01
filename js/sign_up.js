@@ -13,7 +13,7 @@ function validateForm() {
      let phonePattern = /^[0-9]{10}$/;
      let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/; // At least 8 characters and one number
  
-     let firstNameValid = firstNamePattern.test(firstName);
+     let firstNameValid = FirstnamePattern.test(firstName);
      let lastNameValid = lastNamePattern.test(lastName);
      let emailValid = emailPattern.test(email);
      let phoneValid = phonePattern.test(phone);
