@@ -1,3 +1,6 @@
+window.onload = function(){
+    firstName.focus();
+}
 function validateForm() {
      let firstName = document.getElementById('firstName').value;
      let lastName = document.getElementById('lastName').value;
