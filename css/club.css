@@ -36,7 +36,7 @@ i{
   cursor: pointer;
   margin-right: 30px;
 }
-button{
+.button-out{
   background-color: #e23636;
   border: none;
   color: white;
@@ -49,30 +49,111 @@ button{
   cursor: pointer;
   border-radius: 12px;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 360;
   line-height: normal;
   position: absolute;
   top: 60px;
   right: 0;
-  margin-right: 45px;
+  margin-right: 60px;
+}
+.button-out:hover{
+  background-color: #ff0000;
+  font-size: 16px;
 }
 .line{
   width: 70%; 
   height: 0px; 
   left: 100px; 
-  position: absolute; 
+  position: relative; 
   margin-top: 50px;
   border: 3px black solid ;
 }
-.sportclub{
-  left: 174px;
-  top: 373px; 
-  position: absolute; 
+.rectangle{
+  width: 180px; 
+  height: 65px; 
+  background: #36E2A4; 
+  border-radius: 20px;
+  margin:60px;
+  display: flex;             
+  justify-content: center;   
+  align-items: center;
   text-align: center; 
   color: black; 
   font-size: 30px; 
   font-family: Inter; 
-  font-weight: 800; 
+  font-weight: 800;
 }
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.container { 
+  width: 500px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+.circle {
+  width: 47px; 
+  height: 47px; 
+  background: #4ADA59; 
+  border-radius: 50%;
+}
+
+.sportclub {
+  position: absolute;
+  color: black; 
+  font-size: 30px; 
+  font-family: Inter; 
+  font-weight: 800; 
+  margin-top: 0.4rem;
+  margin-left: 4rem;
+}
+
+.small_desc {
+  text-align: center; 
+  color: black; 
+  font-size: 24px; 
+  font-family: Inter; 
+  font-weight: 500; 
+  word-wrap: break-word;
+}
+
+.long_desc {
+  color: black; 
+  font-size: 20px; 
+  font-family: Inter; 
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+
+.button_join {
+  height: 65px;  
+  background: #36E2A4; 
+  border-radius: 20px; 
+  text-align: center; 
+  color: black;
+  font-size: 32px; 
+  font-family: Inter; 
+  font-weight: 600; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button_join:hover {
+  background-color: #00f677;
+  font-size: 2.2rem;
+}
+
