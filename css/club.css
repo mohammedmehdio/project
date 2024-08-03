@@ -60,7 +60,6 @@ i{
 }
 .button-out:hover{
   background-color: #ff0000;
-  font-size: 16px;
 }
 .line{
   width: 70%; 
@@ -101,7 +100,6 @@ i{
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
 }
 
 .circle {
@@ -157,3 +155,85 @@ i{
   font-size: 2.2rem;
 }
 
+@media screen and (max-width: 900px) {
+  .head{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    border: 2px ;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    background-color: #36E2A4;
+  }
+.head h1{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+padding: 1px;
+}
+i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.button-out{
+  background-color: #e23636;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 360;
+  line-height: normal;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  margin-right: 10px;
+}
+.button-out:hover{
+  background-color: #ff0000;
+}
+.line{
+  display: none;
+}
+.rectangle{
+  width: 180px; 
+  height: 65px; 
+  background: #36E2A4; 
+  border-radius: 20px;
+  margin:60px;
+  display: flex;             
+  justify-content: center;   
+  align-items: center;
+  text-align: center; 
+  color: black; 
+  font-size: 30px; 
+  font-family: Inter; 
+  font-weight: 800;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+.container{
+  width: 350px;
+}
+}
