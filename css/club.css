@@ -40,8 +40,10 @@ padding: 30px;
 }
 .home{
   position: absolute;
-
+margin-left: 10px;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 .button-out{
   background-color: #e23636;
