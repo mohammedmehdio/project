@@ -5,14 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap');
 
 body{
-    background-image:white;
+  background: url(../img/image.png) no-repeat center center fixed;
+  background-size: cover;
     margin: 0;
     padding: 0;
+    
   }
   .head{
     border: 2px ;
     border-radius: 20px;
-    margin: 0 auto;
+    margin:  auto;
     width: 300px;
     height: 100px;
     flex-shrink: 0;
@@ -28,13 +30,18 @@ font-weight: 800;
 line-height: normal;
 padding: 30px;
 }
-i{
+.user{
   position: absolute;
   top: 0;
   right: 0;
   padding: 30px;
   cursor: pointer;
   margin-right: 30px;
+}
+.home{
+  position: absolute;
+
+  cursor: pointer;
 }
 .button-out{
   background-color: #e23636;
@@ -178,7 +185,7 @@ font-weight: 700;
 line-height: normal;
 padding: 1px;
 }
-i{
+.user{
   position: absolute;
   top: 0;
   right: 0;
@@ -188,6 +195,16 @@ i{
   margin-top: 5px;
   font-size: 10px;
 }
+.home{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 10px;
+}   
 .button-out{
   background-color: #e23636;
   border: none;
@@ -198,9 +215,10 @@ i{
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 10px;
   font-family: Inter;
   font-size: 10px;
+  width: 110px;
   font-style: normal;
   font-weight: 360;
   line-height: normal;
@@ -234,6 +252,6 @@ i{
   margin-bottom: 30px;
 }
 .container{
-  width: 350px;
+  width: 300px;
 }
 }

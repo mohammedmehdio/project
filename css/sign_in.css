@@ -22,7 +22,7 @@ h1{
   color: rgba(0, 0, 0, 0.845);
   font-size: 40px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom:10px ;
+  margin-bottom:10px;
 }
 
 .form {
@@ -272,4 +272,10 @@ button:hover span:not(:nth-child(6)) {
 
   .righting{
     font-family: 'Courier New', Courier, monospace;
+  }
+
+  @media screen and (max-width: 926px) {
+    .footer{
+      display: none;
+    }
   }
