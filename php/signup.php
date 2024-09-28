@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssss", $first_name, $last_name, $phone, $email, $birth_date, $hashed_password);
 
     if ($stmt->execute()) {
-        echo "Registration successful!";
+               echo "<meta http-equiv='refresh' content='0; url=../html/sign_in.html'>";
     } else {
         echo "Error: " . $stmt->error;
     }

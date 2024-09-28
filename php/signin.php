@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_result($hashed_password);
     $stmt->fetch();
     if (password_verify($password, $hashed_password)) {
-        echo "Login successful!";
+        echo "<meta http-equiv='refresh' content='0; url=../html/club.html'>";
       
     } else {
         echo "Invalid password.";
