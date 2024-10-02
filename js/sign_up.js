@@ -5,6 +5,7 @@ function validateForm() {
      let firstName = document.getElementById('firstName').value;
      let lastName = document.getElementById('lastName').value;
      let email = document.getElementById('email').value;
+     let username = document.getElementById('username').value;
      let phone = document.getElementById('phone').value;
      let password = document.getElementById('password').value;
      let confirmPassword = document.getElementById('confirm_password').value;
@@ -19,6 +20,7 @@ function validateForm() {
      let firstNameValid = FirstnamePattern.test(firstName);
      let lastNameValid = lastNamePattern.test(lastName);
      let emailValid = emailPattern.test(email);
+     let usernameValid = emailPattern.test(username);
      let phoneValid = phonePattern.test(phone);
      let passwordValid = passwordPattern.test(password);
      let confirmPasswordValid = password === confirmPassword;
@@ -28,6 +30,7 @@ function validateForm() {
      let firstNameError = document.getElementById('Firstname-error');
      let lastNameError = document.getElementById('Lastname-error');
      let emailError = document.getElementById('email-error');
+     let usernameError = document.getElementById('username-error');
      let phoneError = document.getElementById('phone_number-error');
      let passwordError = document.getElementById('password-error');
      let confirmPasswordError = document.getElementById('confirm_password-error');
@@ -36,6 +39,7 @@ function validateForm() {
      firstNameError.textContent = '';
      lastNameError.textContent = '';
      emailError.textContent = '';
+     usernameError.textContent = '';
      phoneError.textContent = '';
      passwordError.textContent = '';
      confirmPasswordError.textContent = '';
@@ -49,6 +53,9 @@ function validateForm() {
      }
      if (!emailValid) {
          emailError.textContent = 'Please enter a valid email address';
+     }
+     if (!usernameValid) {
+         usernameError.textContent = 'Please enter a valid username';
      }
      if (!phoneValid) {
          phoneError.textContent = 'Please enter a valid phone number';
@@ -83,6 +90,7 @@ function validateForm() {
      let firstNameInput = document.getElementById('firstName');
      let lastNameInput = document.getElementById('lastName');
      let emailInput = document.getElementById('email');
+     let usernameInput = document.getElementById('username');
      let phoneInput = document.getElementById('phone');
      let birthDateInput = document.getElementById('birth_date');
      let passwordInput = document.getElementById('password');
@@ -102,16 +110,23 @@ function validateForm() {
      });
      emailInput.addEventListener('keydown', function(event) {
          if (event.key === 'Enter' || event.key === 'ArrowDown') {
-             phoneInput.focus();
+             usernameInput.focus();
          } else if (event.key === 'ArrowUp') {
              lastNameInput.focus();
+         }
+     });
+     usernameInput.addEventListener('keydown', function(event) {
+         if (event.key === 'Enter' || event.key === 'ArrowDown') {
+             phoneInput.focus();
+         } else if (event.key === 'ArrowUp') {
+             emailInput.focus();
          }
      });
      phoneInput.addEventListener('keydown', function(event) {
          if (event.key === 'Enter' || event.key === 'ArrowDown') {
              birthDateInput.focus();
          } else if (event.key === 'ArrowUp') {
-             emailInput.focus();
+             usernameInput.focus();
          }
      });
      birthDateInput.addEventListener('keydown', function(event) {

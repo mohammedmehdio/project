@@ -12,12 +12,18 @@
     <a href="../index.html"><div class="home"><i class='fas fa-home-alt' > H o m e </i></div></a>
    <div class="head">
          <h1>ClubHUb</h1></div>
-        <div class="user"> <i class='fas fa-user-alt' > u s e r  n a m e </i></div>
+        <div class="user"> <i class='fas fa-user-alt' > </i> <p id="welcomeMessage"> Guest</p>
+            <script>
+                const username = localStorage.getItem('username');
+                if (username) {
+                    document.getElementById('welcomeMessage').innerText = `${username}`;
+                }
+            </script></div>
          
          <div>
             
          </div>
-         <button class="button-out">Sign out</button>
+         
    
     <div class="line"></div>
     <div class="rectangle">Ourclubs</div>
@@ -67,6 +73,12 @@
             <button class="button_join">Join</button>
         </div>
       </div>
-      
+      <div class="info">
+        <a href="user_info.html" class="btn">
+            <i class="animation"></i> About Me <i class="animation"></i>
+        </a>
+        
+        </button>
+    </div>
 </body>
 </html>

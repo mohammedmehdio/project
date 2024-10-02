@@ -30,14 +30,7 @@ font-weight: 800;
 line-height: normal;
 padding: 30px;
 }
-.user{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 30px;
-  cursor: pointer;
-  margin-right: 30px;
-}
+
 .home{
   position: absolute;
 margin-left: 10px;
@@ -45,30 +38,29 @@ margin-left: 10px;
   color: inherit;
   text-decoration: none;
 }
-.button-out{
-  background-color: #e23636;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+#welcomeMessage{
+  font-size: 27px;
+  font-weight: bold;
+  position:absolute;
+  top: -3px;
+  right: 15px;
   cursor: pointer;
-  border-radius: 12px;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 360;
-  line-height: normal;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  margin-right: 60px;
+padding: 20px;
+padding-right: 20px;
+
 }
-.button-out:hover{
-  background-color: #ff0000;
+
+.fa-user-alt{
+font-size: 20px;
+position: absolute;
+top: 28px;
+right: 88px;
+cursor: pointer;
+padding: 20px;
+
+}
+.user{
+  cursor: pointer;
 }
 .line{
   width: 70%; 
@@ -158,12 +150,61 @@ margin-left: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+}
 
 .button_join:hover {
   background-color: #00f677;
   font-size: 2.2rem;
 }
+/* From Uiverse.io by mi-series */ 
+.btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40B3A2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+.btn:hover {
+  opacity: .95;
+}
+
+.btn .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+.info{
+  position: absolute;
+  right: 100px;
+  padding: 20px;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
 @media screen and (max-width: 900px) {
   .head{
     position: absolute;
@@ -187,16 +228,7 @@ font-weight: 700;
 line-height: normal;
 padding: 1px;
 }
-.user{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  cursor: pointer;
-  margin-right: 10px;
-  margin-top: 5px;
-  font-size: 10px;
-}
+
 .home{
   position: absolute;
   top: 0;
@@ -207,31 +239,7 @@ padding: 1px;
   margin-top: 5px;
   font-size: 10px;
 }   
-.button-out{
-  background-color: #e23636;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-  font-family: Inter;
-  font-size: 10px;
-  width: 110px;
-  font-style: normal;
-  font-weight: 360;
-  line-height: normal;
-  position: absolute;
-  top: 30px;
-  right: 0;
-  margin-right: 10px;
-}
-.button-out:hover{
-  background-color: #ff0000;
-}
+
 .line{
   display: none;
 }

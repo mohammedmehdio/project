@@ -15,7 +15,7 @@
         <h1>Let's begin the adventure!</h1>
     </div>
 
-    <form class="form" action="../php/signup.php" method="post" onsubmit="return validateForm();">
+    <form id="usernameForm" class="form" action="../php/signup.php" method="post" onsubmit="return validateForm();">
         <p class="title">Register </p>
         <p class="message">We'll sign you in, or create an account if you don't have one yet.</p>
         <div class="flex">
@@ -34,6 +34,11 @@
             <input class="input" type="email" placeholder="" required="" id="email" name="email">
             <span>Email</span>
             <div id="email-error" class="error-message"></div>
+        </label> 
+        <label>
+            <input class="input" type="text" placeholder="" required="" id="username" name="username">
+            <span>Username</span>
+            <div id="username-error" class="error-message"></div>
         </label> 
         <label>
             <input class="input" type="nuber" id="phone" name="phone" placeholder="" required="" >
@@ -56,6 +61,14 @@
             <span>Confirm password</span>
             <div id="confirm_password-error" class="error-message"></div>
         </label>
+        <script>
+            document.getElementById('usernameForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                const username = document.getElementById('username').value;
+                localStorage.setItem('username', username); // Store username
+                window.location.href = 'club.html'; // Redirect to welcome page
+            });
+        </script>
         <button type="submit">
             <span class="circle1"></span>
             <span class="circle2"></span>
