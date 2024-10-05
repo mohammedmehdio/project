@@ -265,3 +265,20 @@ padding: 1px;
   width: 300px;
 }
 }
+.search-container {
+  text-align : center;
+  margin: 20px 0;
+}
+#clubSearch {
+  width: 60%;
+  padding: 10px;
+  border-radius:20px;
+  border : 2px solid #36E2A4;
+  font-size: 18px;
+  outline: none;
+}
+.status-message {
+  margin-top: 10px; /* Add some space above the message */
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Make the message bold */
+}

@@ -4,81 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/club.css">
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <script src="../js/club.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Club</title>
 </head>
 <body>
-    <a href="../index.html"><div class="home"><i class='fas fa-home-alt' > H o m e </i></div></a>
-   <div class="head">
-         <h1>ClubHUb</h1></div>
-        <div class="user"> <i class='fas fa-user-alt' > </i> <p id="welcomeMessage"> Guest</p>
-            <script>
-                const username = localStorage.getItem('username');
-                if (username) {
-                    document.getElementById('welcomeMessage').innerText = `${username}`;
-                }
-            </script></div>
-         
-         <div>
-            
-         </div>
-         
-   
+    <a href="../index.html">
+        <div class="home"><i class='fas fa-home-alt'> H o m e </i></div>
+    </a>
+
+    <div class="head">
+        <h1>ClubHUb</h1>
+    </div>
+
+    <div class="user">
+        <i class='fas fa-user-alt'></i>
+        <p id="welcomeMessage">Guest</p>
+        
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="clubSearch" placeholder="Search for a club..." onkeyup="searchClubs()">
+    </div>
+
     <div class="line"></div>
-    <div class="rectangle">Ourclubs</div>
-    
+    <div class="rectangle">Our Clubs</div>
+
     <div class="wrapper">
+        <!-- Example club item -->
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Sport club</div>
-            <div class="small_desc">small description about the club</div>
+            <div class="sportclub">Sport Club</div>
+            <div class="small_desc">Small description about the club</div>
             <div class="long_desc">Discover the difference a dedicated, passionate sports community can make in your life. Whether you’re looking to compete, stay active, or just have fun, [Your Club Name] offers top-notch facilities and expert coaching in football, basketball, and volleyball. We’re here to support you every step of the way.</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
-      
+
+        <!-- Repeat for other clubs -->
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Chess club</div>
-            <div class="small_desc">small description about the club</div>
+            <div class="sportclub">Chess Club</div>
+            <div class="small_desc">Small description about the club</div>
             <div class="long_desc">Whether you're a beginner or a seasoned player, our Chess Club welcomes everyone eager to enjoy and improve their game. Meet like-minded chess enthusiasts, participate in friendly matches, and sharpen your strategies. With regular events, tournaments, and expert tips, you'll find plenty of opportunities to grow your skills.</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
+
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Music club</div>
-            <div class="small_desc">small description about the club</div>
+            <div class="sportclub">Music Club</div>
+            <div class="small_desc">Small description about the club</div>
             <div class="long_desc">[Your Music Club Name] offers a welcoming environment where you can learn, create, and share your passion. With access to instruments, workshops, and performances, we’re here to support you every step of the way. Join us today and be part of a vibrant community that celebrates the joy of music!</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
+
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Tech club</div>
-            <div class="small_desc">small description about the club</div>
-            <div class="long_desc"> [Your Tech Club Name] provides the perfect environment to explore, create, and grow. With hands-on workshops, access to the latest technology, and a network of like-minded individuals. Join us today and become part of a vibrant community that’s shaping the future of technology!</div>
+            <div class="sportclub">Tech Club</div>
+            <div class="small_desc">Small description about the club</div>
+            <div class="long_desc">[Your Tech Club Name] provides the perfect environment to explore, create, and grow. With hands-on workshops, access to the latest technology, and a network of like-minded individuals. Join us today and become part of a vibrant community that’s shaping the future of technology!</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
+
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Free talk club</div>
-            <div class="small_desc">small description about the club</div>
+            <div class="sportclub">Free Talk Club</div>
+            <div class="small_desc">Small description about the club</div>
             <div class="long_desc">Improve your communication skills with [Your Communication Club Name]. We offer workshops, discussions, and real-world practice to help you express yourself confidently and connect with others. Join us today and be part of a vibrant community dedicated to mastering the art of communication!</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
+
         <div class="container"> 
             <div class="circle"></div>
-            <div class="sportclub">Design club</div>
-            <div class="small_desc">small description about the club</div>
+            <div class="sportclub">Design Club</div>
+            <div class="small_desc">Small description about the club</div>
             <div class="long_desc">A creative and inspiring community dedicated to the art of design. Whether you’re a graphic designer, a budding artist, or passionate about aesthetics, [Your Design Club Name] offers a space to refine your skills, collaborate on projects, and explore new ideas. Join us today and be part of a dynamic community that celebrates creativity and innovation!</div>
             <button class="button_join">Join</button>
+            <p class="status-message"></p> <!-- Message display for success/failure -->
         </div>
-      </div>
-      <div class="info">
+    </div>
+
+    <div class="info">
         <a href="user_info.html" class="btn">
             <i class="animation"></i> About Me <i class="animation"></i>
         </a>
-        
-        </button>
     </div>
 </body>
 </html>

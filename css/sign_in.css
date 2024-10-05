@@ -279,3 +279,29 @@ button:hover span:not(:nth-child(6)) {
       display: none;
     }
   }
+  .error-message {
+    color: #ff4d4d; /* Bright red to make the error more noticeable */
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #ffe6e6; /* Light red background for contrast */
+    border: 1px solid #ff1a1a; /* Border to make it stand out */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+    padding: 10px; /* Padding around the text for better readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    animation: fadeIn 0.5s ease-in-out; /* Add a fade-in animation */
+    width: 90%;
+    margin: 10px auto; /* Center the error message with margin */
+}
+
+/* Add a simple fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
