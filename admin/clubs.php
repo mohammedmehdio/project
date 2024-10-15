@@ -6,7 +6,45 @@ $clubs = $conn->query($sql_clubs);
 ?>
 
 <?php require "header.php"; ?>
+<script>
+    function searchClubs() {
+    var input = document.getElementById("searchInput").value.toLowerCase();
+    var rows = document.querySelectorAll("#clubTable tbody tr");
 
+    rows.forEach(function(row) {
+        var id = row.children[0].textContent.toLowerCase();
+        var clubName = row.children[1].textContent.toLowerCase();
+        
+        if (id.includes(input) || clubName.includes(input)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+}
+
+function printClubs() {
+    var printWindow = window.open('', '', 'height=900,width=1000');
+    var tableRows = Array.from(document.querySelectorAll('#clubTable tr')).map(row => {
+        var cells = Array.from(row.children);
+        cells.pop(); // Remove the action column
+        return '<tr>' + cells.map(cell => cell.outerHTML).join('') + '</tr>';
+    }).join('');
+
+    printWindow.document.write('<html><head><title>Print Club Information</title>');
+    printWindow.document.write('<style>table {width: 100%; border-collapse: collapse;} th, td {border: 1px solid black; padding: 8px; text-align: left;} th {background-color: #f2f2f2;}</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write('<h2>All Clubs</h2>');
+    printWindow.document.write('<table class="table table-bordered">' + tableRows + '</table>');
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+
+    printWindow.onload = function() {
+        printWindow.print();
+        printWindow.close();
+    };
+}
+</script>
 <div class="container">
     <div class="card mt-5">
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -83,49 +121,6 @@ $clubs = $conn->query($sql_clubs);
 </div>
 
 <?php require "footer.php"; ?>
-
-<!-- JavaScript for Print and Search Functionality -->
-<script>
-// Function to print the clubs table without the action column
-function printClubs() {
-    var printWindow = window.open('', '', 'height=900,width=1000');
-    var tableRows = Array.from(document.querySelectorAll('#clubTable tr')).map(row => {
-        var cells = Array.from(row.children);
-        cells.pop(); // Remove the action column
-        return '<tr>' + cells.map(cell => cell.outerHTML).join('') + '</tr>';
-    }).join('');
-
-    printWindow.document.write('<html><head><title>Print Club Information</title>');
-    printWindow.document.write('<style>table {width: 100%; border-collapse: collapse;} th, td {border: 1px solid black; padding: 8px; text-align: left;} th {background-color: #f2f2f2;}</style>');
-    printWindow.document.write('</head><body>');
-    printWindow.document.write('<h2>All Clubs</h2>');
-    printWindow.document.write('<table class="table table-bordered">' + tableRows + '</table>');
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-
-    printWindow.onload = function() {
-        printWindow.print();
-        printWindow.close();
-    };
-}
-
-// Function to search clubs by ID or Club Name
-function searchClubs() {
-    var input = document.getElementById("searchInput").value.toLowerCase();
-    var rows = document.querySelectorAll("#clubTable tbody tr");
-
-    rows.forEach(function(row) {
-        var id = row.children[0].textContent.toLowerCase();
-        var clubName = row.children[1].textContent.toLowerCase();
-        
-        if (id.includes(input) || clubName.includes(input)) {
-            row.style.display = "";
-        } else {
-            row.style.display = "none";
-        }
-    });
-}
-</script>
 
 <!-- Add Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

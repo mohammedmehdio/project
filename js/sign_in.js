@@ -32,6 +32,6 @@ document.querySelector('form').addEventListener('submit', async function(e) {
         localStorage.setItem('id_user', result.id_user); // Store the user ID
         console.log('User ID stored:', result.id_user); // Log the stored ID for verification
         // Redirect to club.html
-        window.location.href = '../html/club.html';
+        window.location.href = '../php/club.php';
     }
 });

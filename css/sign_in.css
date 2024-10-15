@@ -7,22 +7,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 body{
-    background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);.welcome{
-    position:relative;
-    margin:auto;
-    margin: 0;
-    width:700px;
-    margin-top: 50px;
-    padding: 0;
-}}
+    background: url(../img/blue.jpg) no-repeat center center fixed;
+}
 
 h1{
   text-align: center;
-  font-family: 'Tilt Warp';
-  color: rgba(0, 0, 0, 0.845);
+  font-family: monospace;
+  color: rgb(255, 255, 255);
   font-size: 40px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom:10px;
+ 
 }
 
 .form {
@@ -35,7 +28,7 @@ h1{
   border-radius: 20px;
   position: relative;
   margin: auto;
-  margin-top: 40px;
+  
 }
 
 .title {

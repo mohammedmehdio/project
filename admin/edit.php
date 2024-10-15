@@ -35,7 +35,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['first_name'], $_POST['las
 
 ?>
 
-<?php include "header.php"; ?>
+<?php include "../header.php"; ?>
 
 <div class="container p-5 my-5">
     <div class="card">
