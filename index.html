@@ -1,226 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!-- Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>ClubHub</title>
 
-    <!-- Custom CSS for enhanced styling -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- jQuery (for AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>projet</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Flaticon Font -->
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+ 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">ClubHub</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                
-                <li class="nav-item ms-3"> <!-- Add margin-start (ms) to separate the buttons -->
-                    <a class="nav-link " href="/html/sign_up.html"> <!-- Add text-danger for red color -->
-                        Sign up
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+  <!-- navbar -->
+  <nav>
+    <ul class="menu">
+        <li class="logo"><a href="#" style="color: white;">ClubHub</a></li>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#services">Services</a></li>
+        <li class="item"><a href="#about">About</a></li>
+        <li class="item"><a href="#team">Team</a></li>
+        <li class="item button"><a href="html/sign_in.html" style="color: white;" >Log In</a></li>
+        <li class="item button secondary"><a href="/html/sign_up.html" style="color: white;">Sign Up</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars" style="color:white"></i></a></li>
+    </ul>
 </nav>
 
-    <div>
-        <h1>Welcome to our website!</h1>
-    </div>
-    <div class="first">
-    <img src="img/welcome.png" alt="img/welcome.png">
-    <h2>Welcome to ClubHub - Your Gateway to Joining Exciting Clubs
-    </h2>
-    <p>Create an account with us to enjoy personalized services and a seamless user experience. Our registration system is built with cutting-edge technologies, ensuring your data is handled securely and efficiently. <br> <br>Discover and join a variety of clubs that match your interests and passions. Whether you're into sports, arts, technology, or social causes, our platform connects you with like-minded individuals and enriching experiences.
 
-    </p>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <section class="slider_section ">
+          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="img-box">
+                        <img src="img/welcome.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="detail-box">
+                        <h1>
+                          ClubHub Join Enjoy !
+                        </h1>
+                        <p style="text-align: left;">
+                          Explore clubs in various categories to find your perfect fit. Whether you're into sports, arts, tech, or social causes, our platform connects you with others who share your interests.                        </p>
+                        <div class="btn-box">
+                          <a href="html/sign_in.html" class="btn1">
+                            Join Clubs
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="img-box">
+                        <img src="img/slider-img.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="detail-box">
+                        <h1>
+                          Stay connected Never Miss Out with ClubHub !
+                        </h1>
+                        <p style="text-align: left;">
+                          Timely notifications for any updates or changes. Whether it's new club events, announcements, or membership details, we’ll keep you informed so you can enjoy every opportunity to get involved.
+                        </p>
+                        <div class="btn-box">
+                          <a href="html/sign_in.html" class="btn1">
+                            Join Clubs
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="img-box">
+                        <img src="img/about-img.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="detail-box">
+                        <h1>
+                          User Friendly Experience !
+                        </h1>
+                        <p style="text-align: left;">
+                          Join us to enjoy personalized services and a seamless user experience. Our registration system is built with cutting-edge technologies, ensuring your data is handled securely and efficiently.
+                        </p>
+                        <div class="btn-box">
+                          <a href="html/sign_in.html" class="btn1">
+                            Join Clubs
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ol class="carousel-indicators">
+              <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#customCarousel1" data-slide-to="1"></li>
+              <li data-target="#customCarousel1" data-slide-to="2"></li>
+            </ol>
+          </div>
     
-    <div class="part2">
-<img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_scale,w_440,h_300,f_auto,q_auto,dpr_2.0/brontes/hero/searching-talent@2x.png" alt="">
-<h2>Why Join Clubs on ClubHub?
-</h2>
-<p><b>Diverse Selection: </b>Explore clubs across different categories to find the perfect fit for you.<br>
-    <b>Easy Registration: </b>Seamlessly join clubs with our simple and secure registration process.<br>
-    <b>Community Engagement: </b>Connect with members, participate in events, and share your experiences.<br>
-    <b>Exclusive Benefits: </b> Enjoy exclusive perks, resources, and opportunities available only to club members.<br>
-    Start your journey today and become a part of vibrant communities.<br> Join, engage, and thrive with ClubHub!</p>
-    </div>
-    </div>
-<div class="join">
-<h3>Join us!</h3>
-<a href="html/sign_in.html"><button class="button-51" role="button">sign in</button></a>
-<a href="html/sign_up.html"><button class="button-51" >sign up</button></a>
-</div>
- 
-<footer class="footer">
-    <b class="footer-title">
-        <div class="copy"> CopyRight @ </div><div class="spaced-span"><span>MOHAMMED MEHDI BOUDIR</span> 
-            <div>  
-                <ul class="example-2">
-                    <li class="icon-content">
-                      <a
-                        href="https://www.linkedin.com/in/mohammed-mehdi-boudir-618914298/" target="_blank"
-                        aria-label="LinkedIn"
-                        data-social="linkedin"
-                      >
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-linkedin"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                    <li class="icon-content">
-                      <a href="https://github.com/mohammedmehdio"  target="_blank" aria-label="GitHub" data-social="github">
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-github"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                </ul>
+        </section>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+ <a name="services"></a> <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Services
+        </h2>
+        <p>
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="img/s1.png" alt="">
             </div>
-</div>
-        <div class="spaced-span"> <span class="m">MOHAMMED  EL  AHMAR</span> 
-            <div>
-                <ul class="example-2">
-                    <li class="icon-content">
-                      <a
-                        href="https://www.linkedin.com/in/mohammed-el-ahmar-470516213/" target="_blank"
-                        aria-label="LinkedIn"
-                        data-social="linkedin"
-                      >
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-linkedin"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                    <li class="icon-content">
-                      <a href="https://github.com/mohammedelahmar"  target="_blank" aria-label="GitHub" data-social="github">
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-github"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                </ul>
+            <div class="detail-box">
+              <h5>
+                Clubs Link
+              </h5>
+              <p style="text-align: left;">
+                Our platform make you find your ideal community. Easy to connect with individuals.
+              </p>
+              
             </div>
-</div>
-        <div class="spaced-span"> <span class="m">MERYEM  ZRIOUIL</span>
-            <div>
-                <ul class="example-2">
-                    <li class="icon-content">
-                      <a
-                        href="https://www.linkedin.com/in/meryem-zriouil-73b202317/" target="_blank"
-                        aria-label="LinkedIn"
-                        data-social="linkedin"
-                      >
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-linkedin"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                    <li class="icon-content">
-                      <a href="https://github.com/meryem-ZRIOUIL"  target="_blank" aria-label="GitHub" data-social="github">
-                        <div class="filled"></div>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-github"
-                          viewBox="0 0 16 16"
-                          xml:space="preserve"
-                        >
-                          <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="tooltip"></div>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </div>
-    </b>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="img/s2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Clubs Stats
+              </h5>
+              <p style="text-align: left;">
+                Access organized statistics to gain insights into club trends and performance.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="img/s3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Clubs Updates
+              </h5>
+              <p style="text-align: left;">
+                Stay informed with the latest announcements and events from your chosen clubs.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="img/s4.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Email Updates
+              </h5>
+              <p style="text-align: left;">
+                Receive personalized news and updates directly in your inbox keeping you up to date.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </section>
+  <!-- end service section -->
+
+  <!-- about section -->
+  
+  <section class="about_section layout_padding">
+   <a name="about"></a> <div class="container ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p style="text-align: left;">
+              Our mission is to create a vibrant space where individuals can come together to share their passions and embark on exciting journeys. We make it easy for users to find clubs that fit their interests, sparking connections and allowing new friendships to blossom through shared experiences. With a commitment to enriching lives, we’re dedicated to helping you explore endless possibilities and uncover opportunities that inspire personal growth and collaboration. Join us in shaping a dynamic community where every member can thrive and create lasting memories!
+            </p>
+            <a href="html/sign_in.html">
+              Join Clubs
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="img/about-img.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- Team Start -->
+<a name="team"></a><div class="container mt-5 pt-5 pb-3">
+  <div class="d-flex flex-column text-center mb-5">
+      <h4 class="text-secondary mb-3">Team Member</h4>
+      <h1 class="display-4 m-0">Meet Our <span class="text-primary">Team Member</span></h1>
+  </div>
+  <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6">
+          <div class="team card position-relative overflow-hidden border-0 mb-4">
+              <img class="card-img-top" src="" alt="">
+              <div class="card-body text-center p-0">
+                  <div class="team-text d-flex flex-column justify-content-center bg-light">
+                      <h5>Med Mehdi Boudir</h5>
+                      <i>Front-End Designer</i>
+                  </div>
+                  <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                      <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://github.com/mohammedmehdio"  target="_blank"><i class="fab fa-github"></i></a>
+                      <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.linkedin.com/in/mohamme-mehdi-boudir-618914298/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://x.com/mohammed_mehdio"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="https://www.facebook.com/medmehdi.boudir/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+          <div class="team card position-relative overflow-hidden border-0 mb-4">
+              <img class="card-img-top" src="" alt="">
+              <div class="card-body text-center p-0">
+                  <div class="team-text d-flex flex-column justify-content-center bg-light">
+                      <h5>Mohammed El Ahmar</h5>
+                      <i>JavaScript Developer</i>
+                  </div>
+                  <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://github.com/mohammedelahmar"  target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.linkedin.com/in/mohammed-el-ahmar-470516213/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"  target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+          <div class="team card position-relative overflow-hidden border-0 mb-4">
+              <img class="card-img-top" src="" alt="">
+              <div class="card-body text-center p-0">
+                  <div class="team-text d-flex flex-column justify-content-center bg-light">
+                      <h5>Meryem Zriouil</h5>
+                      <i>Back-End Developer</i>
+                  </div>
+                  <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://github.com/meryem-ZRIOUIL"  target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.linkedin.com/in/meryem-zriouil-73b202317/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"  target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Team End -->
+
+ <!-- Footer Start -->
+<footer class="footer">
+  <div class="container text-center">
+      <p>&copy; 2024 ClubHub. All rights reserved.</p>
+  </div>
 </footer>
+<!-- Footer End -->
+
+  <!-- end about section -->
+
+  <!-- case section -->
+
+ 
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script src="js/navbar.js"></script>
 </body>
+
 </html>
