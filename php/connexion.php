@@ -5,7 +5,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "inscription_clubhub";
-$port = 3306; // Your custom MySQL port 
+$port =4000; // Your custom MySQL port 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
