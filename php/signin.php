@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     
     // Prepare the statement to retrieve user information including id_user
-    $stmt = $conn->prepare("SELECT id_user, password FROM user WHERE email = ?"); // Use lowercase 'user' for table name
+    $stmt = $conn->prepare("SELECT id_user, password FROM user WHERE email = ? "); // Use lowercase 'user' for table name
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();

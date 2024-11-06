@@ -35,3 +35,21 @@ document.querySelector('form').addEventListener('submit', async function(e) {
         window.location.href = '../php/club.php';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    let emailInput = document.getElementById('email');
+    let passwordInput = document.getElementById('password');
+
+    emailInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === 'ArrowDown') {
+            passwordInput.focus();
+        }
+    });
+    passwordInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            validateForm();
+        } else if (event.key === 'ArrowUp') {
+            emailInput.focus();
+        }
+    });
+});

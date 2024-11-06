@@ -14,13 +14,14 @@ function validateForm() {
      let FirstnamePattern = /^([a-zA-Z]{3,} ?)+$/;
      let lastNamePattern = /^[a-zA-Z]{3,}$/;
      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+     let usernamePattern = /^[a-zA-Z0-9._-]{3,16}$/;
      let phonePattern = /^[0-9]{10}$/;
      let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/; // At least 8 characters and one number
  
      let firstNameValid = FirstnamePattern.test(firstName);
      let lastNameValid = lastNamePattern.test(lastName);
      let emailValid = emailPattern.test(email);
-     let usernameValid = emailPattern.test(username);
+     let usernameValid = usernamePattern.test(username);
      let phoneValid = phonePattern.test(phone);
      let passwordValid = passwordPattern.test(password);
      let confirmPasswordValid = password === confirmPassword;
