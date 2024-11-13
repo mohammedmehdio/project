@@ -245,7 +245,7 @@ $joined_clubs = $stmt_joined_clubs->get_result();
             </a>
         </li>
         <li class="profile-dropdown-list-item">
-            <a href="#">
+            <a href="stats.php">
                 <i class="fa-solid fa-chart-line"></i>
                 Analytics
             </a>
@@ -256,7 +256,7 @@ $joined_clubs = $stmt_joined_clubs->get_result();
                 Settings
             </a>
         </li>
-        <hr />
+        <hr/>
         <li class="profile-dropdown-list-item" id="logouthover">
             <a href="logout.php">
                 <i class="fa-solid fa-arrow-right-from-bracket" style="background-color: #e41c38;"></i>
@@ -343,8 +343,6 @@ $joined_clubs = $stmt_joined_clubs->get_result();
         </ul>
     </div>
 </div>
-
-
 
 <!-- Bootstrap JS (Optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
