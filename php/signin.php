@@ -22,13 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verify the password
     if (password_verify($password, $hashed_password)) {
-        // Send success response along with id_user
+        // Send success response along with id_user 
+        $_SESSION ['id_user'] = $id_user;
+    $_SESSION['username'] = $username;
+    
         echo json_encode(array("success" => true, "id_user " => $id_user));
     } else {
         echo json_encode(array("error" => "Invalid email or password."));
     }
-    $_SESSION ['id_user'] = $id_user;
-    $_SESSION['username'] = $username;
+   
     $stmt->close();
 }
 $conn->close();

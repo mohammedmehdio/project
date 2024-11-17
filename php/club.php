@@ -250,12 +250,6 @@ $joined_clubs = $stmt_joined_clubs->get_result();
                 Analytics
             </a>
         </li>
-        <li class="profile-dropdown-list-item">
-            <a href="#">
-                <i class="fa-solid fa-sliders"></i>
-                Settings
-            </a>
-        </li>
         <hr/>
         <li class="profile-dropdown-list-item" id="logouthover">
             <a href="logout.php">
@@ -330,19 +324,10 @@ $joined_clubs = $stmt_joined_clubs->get_result();
 </div>
 
     <!-- User's Clubs Section -->
-    <div>
-        <h2 class="fw-semibold text-secondary mb-4">Your Clubs</h2>
-
-        <ul class="list-group mb-4">
             <?php while ($joined = $joined_clubs->fetch_assoc()): ?>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
                     <?= $joined['club_name'] ?>
-                    <span class="badge bg-primary rounded-pill">Member</span>
-                </li>
             <?php endwhile; ?>
-        </ul>
-    </div>
-</div>
+
 
 <!-- Bootstrap JS (Optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

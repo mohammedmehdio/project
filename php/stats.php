@@ -22,12 +22,41 @@ $joined_clubs = $stmt_joined_clubs->get_result();
     <title>Your Clubs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Custom styling */
-        body{
+        body {
             background: url(../img/blue.jpg) no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Poppins", sans-serif;
         }
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
-:root {
+        .container {
+            max-width: 900px;
+        }
+        .club-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .club-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-leave {
+            background-color: #ff4d4d;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-leave:hover {
+            background-color: #ff3333;
+        }
+
+        :root {
   --primary: #eeeeee;
   --secondary: #227c70;
   --green: #82cd47;
@@ -37,14 +66,6 @@ $joined_clubs = $stmt_joined_clubs->get_result();
   --black: #393e46;
 
   --shadow: 0px 2px 8px 0px var(--secondary-light);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -92,49 +113,6 @@ body {
   color: #fff !important;
   margin-left: 0px;
 }
-.hero-section {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
-  background: transparent ;
-}
-
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-.navbar {
-  background-color: rgba(27, 103, 218, 0.356);
-}
-.navbar-brand, .nav-link {
-  padding: 0;
-  color: #fff !important;
-  margin-left: 0px;
-}
-.hero-section {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
-  background: transparent ;
-}
-
-ul {
-  padding-left: 0;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Add this */
-  background-color: rgba(27, 103, 218, 0.356);
-}
-
-.navbar-brand:hover {
-  color: #dedee4dc !important;
-}
-        .container { max-width: 600px; }
-        .club-item { display: flex; justify-content: space-between; align-items: center; }
     </style>
 </head>
 <body>
@@ -147,43 +125,42 @@ ul {
         <a class="navbar-brand" href="profile.php">Profile</a>
     </div>
 </nav>
+
 <div class="container py-5">
     <h2 class="fw-semibold text-secondary mb-4">Your Clubs</h2>
 
     <!-- Search Bar -->
     <div class="mb-4">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search your clubs..."  onkeyup="searchClubs()">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search your clubs..." onkeyup="searchClubs()">
     </div>
 
-    <!-- Club List -->
-    <ul class="list-group mb-4" id="clubList">
+    <!-- Clubs as Cards -->
+    <div class="row g-4" id="clubCards">
         <?php while ($joined = $joined_clubs->fetch_assoc()): ?>
-            <li class="list-group-item d-flex justify-content-between align-items-center club-item">
-                <span class="club-name"><?= htmlspecialchars($joined['club_name']) ?></span>
-                <button class="btn btn-outline-danger btn-sm" onclick="leaveClub(<?= $joined['id_club'] ?>)">
-                    Leave
-                </button>
-            </li>
+            <div class="col-md-4">
+                <div class="card club-card">
+                    <div class="card-body">
+                        <span class="club-name"><?= htmlspecialchars($joined['club_name']) ?></span>
+                        <button class="btn-leave" onclick="leaveClub(<?= $joined['id_club'] ?>)">Leave</button>
+                    </div>
+                </div>
+            </div>
         <?php endwhile; ?>
-    </ul>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     // JavaScript for Filtering Clubs
     function searchClubs() {
-    var input = document.getElementById("searchInput").value.toLowerCase();
-    var cards = document.querySelectorAll(".club-name");
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const cards = document.querySelectorAll(".club-card");
 
-    cards.forEach(function(card) {
-        var clubName = card.querySelector(".club-name").textContent.toLowerCase();
-        if (clubName.includes(input)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
-    });
-}
+        cards.forEach(card => {
+            const clubName = card.querySelector(".club-name").textContent.toLowerCase();
+            card.style.display = clubName.includes(input) ? "" : "none";
+        });
+    }
 
     // AJAX call for leaving a club
     function leaveClub(clubId) {
@@ -200,6 +177,5 @@ ul {
         });
     }
 </script>
-
 </body>
 </html>

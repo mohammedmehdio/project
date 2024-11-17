@@ -96,12 +96,12 @@ function printClubs() {
                                     $result_members = $stmt_members->get_result();
                                     
                                     while ($member = $result_members->fetch_assoc()): ?>
-                                        <li>
+                                        <li style="position: relative; margin-bottom:20px">
                                             <?= $member['username'] ?>
                                             <!-- Kick user button -->
                                             <a href="kick_user.php?id_user=<?= $member['id_user'] ?>&id_club=<?= $club['id_club'] ?>" 
                                                onclick="return confirm('Are you sure you want to kick this member?')" 
-                                               class="btn btn-danger btn-sm">Kick</a>
+                                               class="btn btn-danger btn-sm" style="position:absolute; right: 0; padding: 5px; margin-right: 9px; height:fit-content">Kick</a>
                                         </li>
                                     <?php endwhile; ?>
                                 </ul>
