@@ -1,11 +1,13 @@
 <?php
-session_start(); // Only call this once in your project, if needed
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Only start the session if it hasn't already started
+}
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "inscription_clubhub";
-$port =3306; // Your custom MySQL port 
+$port = 4000; // Your custom MySQL port
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, $port);

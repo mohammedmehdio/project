@@ -28,11 +28,17 @@ document.querySelector('form').addEventListener('submit', async function(e) {
         errorMessage.classList.add('error-message');
         document.querySelector('form').appendChild(errorMessage);
     } else if (result.success) {
-        // If login is successful, store the user ID in localStorage
+        // If login is successful, store the user ID and usertype in localStorage
         localStorage.setItem('id_user', result.id_user); // Store the user ID
+        localStorage.setItem('usertype', result.usertype); // Store the user type (user or admin)
         console.log('User ID stored:', result.id_user); // Log the stored ID for verification
-        // Redirect to club.html
-        window.location.href = '../php/club.php';
+
+        // Redirect based on usertype
+        if (result.usertype === 'admin') {
+            window.location.href = '../admin/index.php'; // Redirect to admin dashboard
+        } else {
+            window.location.href = '../php/club.php'; // Redirect to user club page
+        }
     }
 });
 
