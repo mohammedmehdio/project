@@ -1,7 +1,6 @@
-# <p align="center"><img src="https://github.com/user-attachments/assets/3a3ecb60-012f-42cf-9bad-0c75953733f0" width="900px" height="300px"> </p>
+# ClubHub ✨
 
-
-##   Overview
+## Overview
 ClubHub is a web platform designed to enable users to sign up and join clubs online. The platform is built with user experience and efficiency in mind, offering various features that enhance club management and engagement.
 
 ## Key Features
